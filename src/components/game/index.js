@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Gform from './gform/index';
-import Guess from './guess/index';
-import Response from './response/index';
-import Nav from './nav/index';
+import Gform from '../gform/index';
+import Guess from '../guess/index';
+import Response from '../response/index';
+import Nav from '../nav/index';
 import './index.css';
 //nav.js
 //gameWindow.js 
@@ -27,9 +27,9 @@ export default class Game extends React.Component {
           <Nav />
           <h1>Hot or Cold</h1>
         </header>
-        <section class="">
+        <section className="">
           <Response />
-          <Gform />
+          <Gform prevGuesses={this.state.prevGuesses.length} />
           {guesses}
         </section>
       </div>
